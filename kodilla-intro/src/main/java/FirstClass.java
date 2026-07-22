@@ -17,6 +17,13 @@ public class FirstClass {
         oldNotebook.checkPrice();
         oldNotebook.checkWeight();
         oldNotebook.checkYearAndPrice();
+
+        Grades grades = new Grades();
+        grades.add(5);
+        grades.add(4);
+        grades.add(3);
+
+        System.out.println(grades.getLastGrade());
+        System.out.println(grades.getAverage());
     }
 }
-
