@@ -6,7 +6,7 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
-        int squareResult = calculator.square(a);
+        int squareResult = (int) calculator.square(a);
         boolean squareCorrect = ResultChecker.assertEquals(25, squareResult);
         if (squareCorrect) {
             System.out.println("Metoda square działa poprawnie dla liczby " + a);
