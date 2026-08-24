@@ -29,7 +29,8 @@ public class CarsListApplication {
 
         for (Car car : cars) {
             CarUtils.describeCar(car);
-            System.out.println("List size: " + cars.size());
         }
+
+        System.out.println("List size: " + cars.size());
     }
 }
