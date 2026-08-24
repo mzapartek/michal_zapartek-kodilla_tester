@@ -19,6 +19,8 @@ class FlightFinderTestSuite {
 
         // then
         assertEquals(2, result.size());
+        assertEquals("London", result.get(0).getArrival());
+        assertEquals("Paris", result.get(1).getArrival());
     }
 
     @Test
@@ -31,5 +33,19 @@ class FlightFinderTestSuite {
 
         // then
         assertEquals(2, result.size());
+        assertEquals("Warsaw", result.get(0).getDeparture());
+        assertEquals("Krakow", result.get(1).getDeparture());
+    }
+
+    @Test
+    public void testFindFlightsFromNonExistingCity() {
+        // given
+        FlightFinder flightFinder = new FlightFinder();
+
+        // when
+        List<Flight> result = flightFinder.findFlightsFrom("Bialystok");
+
+        // then
+        assertTrue(result.isEmpty());
     }
 }
