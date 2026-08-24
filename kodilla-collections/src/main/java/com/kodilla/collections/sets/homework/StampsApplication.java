@@ -9,6 +9,7 @@ public class StampsApplication {
         stamps.add(new Stamp("Polska", 40.0, 30.0, false));
         stamps.add(new Stamp("Niemcy", 50.0, 20.0, false));
         stamps.add(new Stamp("Litwa", 55.0, 25.0, false));
+        stamps.add(new Stamp("Polska", 40.0, 30.0, false));
 
         System.out.println(stamps.size());
 
