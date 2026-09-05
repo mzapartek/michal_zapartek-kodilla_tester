@@ -28,7 +28,8 @@ class UserValidatorTestSuite {
     @ValueSource(strings = {
             "test@gmail.com",
             "john.doe@example.com",
-            "michal_123@test.pl"
+            "michal_123@test.pl",
+            "jan.kowalski+test@gmail.com"
     })
     public void shouldAcceptCorrectEmail(String email) {
         assertTrue(validator.validateEmail(email));
@@ -36,6 +37,7 @@ class UserValidatorTestSuite {
 
     @ParameterizedTest
     @ValueSource(strings = {
+            "",
             "test",
             "test@",
             "@test.com",
