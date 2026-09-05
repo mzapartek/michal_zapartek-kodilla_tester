@@ -26,10 +26,10 @@ public class Application {
             );
         }
     }
-public static String getTeacherName(Student student) {
-    Teacher teacher = Optional.ofNullable(student.getTeacher())
-            .orElse(new Teacher("<undefined>"));
 
-    return teacher.getName();
-}
+    public static String getTeacherName(Student student) {
+        return Optional.ofNullable(student.getTeacher())
+                .map(Teacher::getName)
+                .orElse("<undefined>");
+    }
 }
