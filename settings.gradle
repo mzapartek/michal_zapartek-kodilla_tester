@@ -5,7 +5,4 @@ include 'kodilla-collections'
 include 'kodilla-collections-advanced'
 include 'kodilla-stream'
 include 'kodilla-advanced-tests'
-include 'kodilla-basic-tests:kodilla-spring-basic'
-findProject(':kodilla-basic-tests:kodilla-spring-basic')?.name = 'kodilla-spring-basic'
 include 'kodilla-spring-basic'
-
