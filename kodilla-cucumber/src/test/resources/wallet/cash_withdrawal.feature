@@ -1,0 +1,17 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from wallet
+
+    Given I have deposited $200 in my wallet
+    When I request $30
+    Then $30 should be dispensed
+  Scenario: Withdraw all money from wallet
+
+    Given I have deposited $200 in my wallet
+    When I request $200
+    Then $200 should be dispensed
+  Scenario: Withdrawal exceeds wallet balance
+
+    Given I have deposited $200 in my wallet
+    When I request $300
+    Then $0 should be dispensed
